@@ -1,28 +1,29 @@
-"use strict";
+'use strict'
 
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
-const Model = use("Model");
+const Model = use('Model')
 
 /** @type {import('@adonisjs/framework/src/Hash')} */
-const Hash = use("Hash");
+const Hash = use('Hash')
 
 class User extends Model {
   static boot() {
-    super.boot();
-
-    this.addTrait("ParseQuery", {
-      // searchableFields: ['username', 'email', 'employee.name', 'employee.code', 'employee.nickname']
-    });
-
+    super.boot()
     /**
      * A hook to hash the user password before saving
      * it to the database.
      */
-    this.addHook("beforeSave", async (userInstance) => {
+    this.addHook('beforeSave', async userInstance => {
       if (userInstance.dirty.password) {
-        userInstance.password = await Hash.make(userInstance.password);
+        userInstance.password = await Hash.make(userInstance.password)
       }
-    });
+    })
+
+    this.addTrait('ParseQuery', {
+      searchableFields: []
+    })
+    this.addTrait('HasPermission')
+    // this.excludeRelations = ['userRole.role']
   }
 
   /**
@@ -36,8 +37,16 @@ class User extends Model {
    * @return {Object}
    */
   tokens() {
-    return this.hasMany("App/Models/Token");
+    return this.hasMany('App/Models/Token')
+  }
+
+  /*
+   * relationship
+   */
+
+  roles() {
+    return this.belongsToMany('App/Models/Role').withTimestamps()
   }
 }
 
-module.exports = User;
+module.exports = User
