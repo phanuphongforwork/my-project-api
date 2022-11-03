@@ -60,9 +60,7 @@ module.exports = {
   |
   */
   raw: {
-    types: [
-      'text/*'
-    ]
+    types: ['text/*']
   },
 
   /*
@@ -74,9 +72,7 @@ module.exports = {
   |
   */
   form: {
-    types: [
-      'application/x-www-form-urlencoded'
-    ]
+    types: ['application/x-www-form-urlencoded']
   },
 
   /*
@@ -88,9 +84,7 @@ module.exports = {
   |
   */
   files: {
-    types: [
-      'multipart/form-data'
-    ],
+    types: ['multipart/form-data'],
 
     /*
     |--------------------------------------------------------------------------
@@ -133,7 +127,11 @@ module.exports = {
     | is to true. Otherwise everything is processed manually.
     |
     */
-    processManually: []
+    processManually: [
+      '/api/v1/files',
+      '/api/v1/employees/:id/upload-profile-image',
+      '/api/v1/tasks/:id/transactions/:taskTransactionId/upload-file'
+    ]
 
     /*
     |--------------------------------------------------------------------------

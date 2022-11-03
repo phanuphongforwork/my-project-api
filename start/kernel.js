@@ -12,10 +12,7 @@ const Server = use('Server')
 | match.
 |
 */
-const globalMiddleware = [
-  'Adonis/Middleware/BodyParser',
-  'App/Middleware/ConvertEmptyStringsToNull'
-]
+const globalMiddleware = ['Adonis/Middleware/BodyParser', 'App/Middleware/ConvertEmptyStringsToNull']
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +33,14 @@ const globalMiddleware = [
 */
 const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
-  guest: 'Adonis/Middleware/AllowGuestOnly'
+  guest: 'Adonis/Middleware/AllowGuestOnly',
+  apiKey: 'App/Middleware/ApiKey',
+  can: 'App/Middleware/Acl/Can',
+  withCompany: 'App/Middleware/WithCompany',
+  confirmPassword: 'App/Middleware/ConfirmPassword',
+  activeRole: 'App/Middleware/ActiveRole',
+  initialize: 'App/Middleware/Initialize',
+  caretakerPlan: 'App/Middleware/CaretakerPlan'
 }
 
 /*
@@ -54,7 +58,6 @@ const serverMiddleware = [
   'Adonis/Middleware/Cors'
 ]
 
-Server
-  .registerGlobal(globalMiddleware)
+Server.registerGlobal(globalMiddleware)
   .registerNamed(namedMiddleware)
   .use(serverMiddleware)

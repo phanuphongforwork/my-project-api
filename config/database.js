@@ -58,6 +58,13 @@ module.exports = {
       database: Env.get('DB_DATABASE', 'adonis')
     },
     debug: Env.get('DB_DEBUG', false)
+    // pool: {
+    //   afterCreate: function(connection, callback) {
+    //     connection.query('SET time_zone = "Asia/Bangkok";', function(err) {
+    //       callback(err, connection)
+    //     })
+    //   }
+    // }
   },
 
   /*
