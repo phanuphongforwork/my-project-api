@@ -1,16 +1,15 @@
 const Transformer = use('App/Transformers/Transformer')
-const get = require('lodash/get')
 
-class User extends Transformer {
+class Alley extends Transformer {
   async transform() {
     return {
-      id: this.model.id,
-      username: this.model.username,
-      status: this.model.username,
+      alley_id: this.model.alley_id,
+      alley_name: this.model.alley_name,
+      subdistrict_id: this.model.subdistrict_id,
       created_at: this.model.created_at,
       updated_at: this.model.updated_at
     }
   }
 }
 
-module.exports = User
+module.exports = Alley

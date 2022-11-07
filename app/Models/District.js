@@ -8,6 +8,10 @@ class District extends Model {
     return 'districts'
   }
 
+  static get primaryKey() {
+    return 'district_id'
+  }
+
   static boot() {
     super.boot()
 

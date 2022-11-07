@@ -7,6 +7,14 @@ const Model = use('Model')
 const Hash = use('Hash')
 
 class User extends Model {
+  static get table() {
+    return 'users'
+  }
+
+  static get primaryKey() {
+    return 'person_id'
+  }
+
   static boot() {
     super.boot()
     /**
@@ -36,17 +44,6 @@ class User extends Model {
    *
    * @return {Object}
    */
-  tokens() {
-    return this.hasMany('App/Models/Token')
-  }
-
-  /*
-   * relationship
-   */
-
-  roles() {
-    return this.belongsToMany('App/Models/Role').withTimestamps()
-  }
 }
 
 module.exports = User

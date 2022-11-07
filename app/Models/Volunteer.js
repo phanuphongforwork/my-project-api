@@ -8,6 +8,10 @@ class Volunteer extends Model {
     return 'volunteers'
   }
 
+  static get primaryKey() {
+    return 'volunteer_id'
+  }
+
   static boot() {
     super.boot()
 
