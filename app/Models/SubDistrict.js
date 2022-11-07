@@ -8,6 +8,10 @@ class SubDistrict extends Model {
     return 'subdistricts'
   }
 
+  static get primaryKey() {
+    return 'subdistrict_id'
+  }
+
   static boot() {
     super.boot()
 

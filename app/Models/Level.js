@@ -8,6 +8,10 @@ class Level extends Model {
     return 'levels'
   }
 
+  static get primaryKey() {
+    return 'level_id'
+  }
+
   static boot() {
     super.boot()
 

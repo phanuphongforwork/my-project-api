@@ -8,6 +8,10 @@ class Community extends Model {
     return 'communities'
   }
 
+  static get primaryKey() {
+    return 'comm_id'
+  }
+
   static boot() {
     super.boot()
 

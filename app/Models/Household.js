@@ -8,6 +8,10 @@ class Household extends Model {
     return 'households'
   }
 
+  static get primaryKey() {
+    return 'hourse_id'
+  }
+
   static boot() {
     super.boot()
 

@@ -10,8 +10,8 @@ class Can {
    * @param {Function} next
    */
   async handle({ auth, response }, next, ...args) {
-    const permission = args[0].join(':')
-    const result = await auth.user.can(permission)
+    const level = args[0]
+    const result = await auth.user.can(level)
     if (!result) {
       response.status(403).json({
         status: 'Unauthorized',

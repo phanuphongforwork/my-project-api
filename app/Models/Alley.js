@@ -7,6 +7,9 @@ class Alley extends Model {
   static get table() {
     return 'alleys'
   }
+  static get primaryKey() {
+    return 'alley_id'
+  }
 
   static boot() {
     super.boot()

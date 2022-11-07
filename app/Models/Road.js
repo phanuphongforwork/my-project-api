@@ -8,6 +8,10 @@ class Road extends Model {
     return 'roads'
   }
 
+  static get primaryKey() {
+    return 'road_id'
+  }
+
   static boot() {
     super.boot()
 

@@ -8,6 +8,10 @@ class Committee extends Model {
     return 'committees'
   }
 
+  static get primaryKey() {
+    return 'committee_id'
+  }
+
   static boot() {
     super.boot()
 

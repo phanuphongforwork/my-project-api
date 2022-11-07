@@ -8,6 +8,10 @@ class Person extends Model {
     return 'persons'
   }
 
+  static get primaryKey() {
+    return 'person_id'
+  }
+
   static boot() {
     super.boot()
 
