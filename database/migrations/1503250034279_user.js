@@ -8,7 +8,7 @@ class UserSchema extends Schema {
     this.create('users', table => {
       table
         .integer('person_id', 1)
-        .notNullable()
+        .nullable()
         .unique()
         .unsigned()
 
