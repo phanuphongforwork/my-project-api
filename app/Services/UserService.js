@@ -19,6 +19,14 @@ class UserService extends Service {
     return user.toJSON()
   }
 
+  static async getByUsername(username) {
+    const user = await User.query()
+      .where('username', username)
+      .first()
+
+    return user.toJSON()
+  }
+
   static async getUserById(id, params = {}) {
     const query = User.parseQuery(params).where('person_id', id)
 

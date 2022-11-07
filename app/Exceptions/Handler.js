@@ -1,7 +1,6 @@
 'use strict'
 
 const BaseExceptionHandler = use('BaseExceptionHandler')
-const Sentry = use('SentryService')
 /**
  * This class handles all exceptions thrown during
  * the HTTP request lifecycle.
@@ -43,9 +42,6 @@ class ExceptionHandler extends BaseExceptionHandler {
    *
    * @return {void}
    */
-  async report(error, { request }) {
-    Sentry.captureException(error)
-  }
 }
 
 module.exports = ExceptionHandler

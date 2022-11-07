@@ -61,7 +61,7 @@ class UserController extends Controller {
   }
 
   async me({ auth, response, request }) {
-    if (auth.user.status !== 1) {
+    if (auth.user.status !== '1') {
       return this.fail(response, null, 'ไม่สามารถเข้าใช้งานได้')
     }
 
