@@ -13,9 +13,11 @@
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 // const Factory = use('Factory')
 const User = use('App/Models/User')
+const Database = use('Database')
 
 class UserSeeder {
   async run() {
+    await Database.truncate('users')
     const user = await User.create({
       username: 'admin',
       password: '123456',

@@ -12,9 +12,11 @@
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 const Service = use('App/Services/LevelService')
+const Database = use('Database')
 
 class LevelSeeder {
   async run() {
+    await Database.truncate('levels')
     await Service.create({
       level_name: 'admin',
       status: '1'

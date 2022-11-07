@@ -20,7 +20,7 @@ class ComnunitySchema extends Schema {
   }
 
   down() {
-    this.drop('commnunities')
+    this.drop('communities')
   }
 }
 

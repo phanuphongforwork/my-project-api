@@ -31,7 +31,7 @@ class PersonSchema extends Schema {
   }
 
   down() {
-    this.drop('people')
+    this.drop('persons')
   }
 }
 

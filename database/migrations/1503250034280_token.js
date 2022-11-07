@@ -7,11 +7,7 @@ class TokensSchema extends Schema {
   up() {
     this.create('tokens', table => {
       table.increments()
-      table
-        .integer('user_id')
-        .unsigned()
-        .references('person_id')
-        .inTable('users')
+      table.integer('user_id').unsigned()
       table
         .string('token', 255)
         .notNullable()
