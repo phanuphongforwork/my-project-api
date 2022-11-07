@@ -20,6 +20,7 @@ class LevelService extends Service {
   }
 
   static async create(payload) {
+    console.log(payload)
     const query = await Model.create(payload)
 
     return query.toJSON()
