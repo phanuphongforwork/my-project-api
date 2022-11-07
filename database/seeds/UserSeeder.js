@@ -17,7 +17,6 @@ const User = use('App/Models/User')
 class UserSeeder {
   async run() {
     const user = await User.create({
-      person_id: 1,
       username: 'admin',
       password: '123456',
       level_id: 1,
