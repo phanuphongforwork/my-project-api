@@ -6,7 +6,7 @@ const PersonTransformer = use('App/Transformers/Person')
 class User extends Transformer {
   async transform() {
     return {
-      id: this.model.id,
+      person_id: this.model.person_id,
       username: this.model.username,
       status: this.model.status,
       level: await LevelTransformer.asyncMake(this.whenLoaded('level')),
