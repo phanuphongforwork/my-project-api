@@ -10,8 +10,8 @@ class ParseQuery {
       q = null,
       filters = [],
       includes = null,
-      sort = 'id',
-      order = 'asc',
+      sort = 'created_at',
+      order = 'desc',
       between = null
     }) {
       let model = Model.query()

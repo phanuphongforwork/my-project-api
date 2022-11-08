@@ -12,20 +12,18 @@
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 // const Factory = use('Factory')
-const User = use('App/Models/User')
+const Service = use('App/Services/PersonService')
 const Database = use('Database')
 
-class UserSeeder {
+class PersonSeeder {
   async run() {
-    await Database.truncate('users')
-    const user = await User.create({
-      person_id: 1,
-      username: 'admin',
-      password: '123456',
-      level_id: 1,
-      status: '1'
+    await Database.truncate('persons')
+    const person = await Service.create({
+      person_name: 'admin',
+      id_card: '1234567890',
+      date_of_birth: '2022-11-08'
     })
   }
 }
 
-module.exports = UserSeeder
+module.exports = PersonSeeder

@@ -61,6 +61,7 @@ class UserController extends Controller {
   }
 
   async me({ auth, response, request }) {
+    console.log(auth.user)
     if (auth.user.status !== '1') {
       return this.fail(response, null, 'ไม่สามารถเข้าใช้งานได้')
     }
@@ -69,7 +70,7 @@ class UserController extends Controller {
       includes: ''
     }
 
-    const user = await UserService.getUserById(auth.user.id, params)
+    const user = await UserService.getUserById(auth.user.person_id, params)
 
     return this.success(response, await UserTransformer.asyncMake(user))
   }

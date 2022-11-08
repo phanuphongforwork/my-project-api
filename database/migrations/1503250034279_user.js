@@ -8,9 +8,9 @@ class UserSchema extends Schema {
     this.create('users', table => {
       table
         .integer('person_id', 1)
-        .nullable()
-        .unique()
+        .notNullable()
         .unsigned()
+        .primary()
 
       table
         .integer('level_id', 1)
