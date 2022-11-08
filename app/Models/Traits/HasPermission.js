@@ -2,14 +2,8 @@
 
 class HasPermission {
   register(Model, customOptions = {}) {
-    Model.prototype.getLevels = async function(levelId = null) {
-      const levels = await this.levels().fetch()
-
-      if (levelId) {
-        levels.rows = levels.rows.filter(item => {
-          return item.id === levelId
-        })
-      }
+    Model.prototype.getLevels = async function() {
+      const levels = await this.level().fetch()
 
       let levelsArray = []
 
@@ -22,7 +16,7 @@ class HasPermission {
       return levelsArray
     }
 
-    Model.prototype.can = async function(checkLevelId, levelId = null) {
+    Model.prototype.can = async function(checkLevelId) {
       const levels = await this.getLevels(levelId)
 
       return levels.includes(checkLevelId)

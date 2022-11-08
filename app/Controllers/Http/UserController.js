@@ -67,7 +67,7 @@ class UserController extends Controller {
     }
 
     const params = {
-      includes: ''
+      includes: 'level,person'
     }
 
     const user = await UserService.getUserById(auth.user.person_id, params)
