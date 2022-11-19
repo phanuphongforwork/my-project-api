@@ -35,12 +35,13 @@ const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
   guest: 'Adonis/Middleware/AllowGuestOnly',
   apiKey: 'App/Middleware/ApiKey',
-  can: 'App/Middleware/Acl/Can',
-  withCompany: 'App/Middleware/WithCompany',
-  confirmPassword: 'App/Middleware/ConfirmPassword',
-  activeRole: 'App/Middleware/ActiveRole',
-  initialize: 'App/Middleware/Initialize',
-  caretakerPlan: 'App/Middleware/CaretakerPlan'
+  // can: 'App/Middleware/Acl/Can',
+  // withCompany: 'App/Middleware/WithCompany',
+  userIsAvailable: 'App/Middleware/userIsAvailable'
+  // confirmPassword: 'App/Middleware/ConfirmPassword',
+  // activeRole: 'App/Middleware/ActiveRole',
+  // initialize: 'App/Middleware/Initialize',
+  // caretakerPlan: 'App/Middleware/CaretakerPlan'
 }
 
 /*
