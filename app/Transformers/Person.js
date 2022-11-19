@@ -14,6 +14,7 @@ class Person extends Transformer {
       disabled: this.model.disabled,
       chronic_disease: this.model.chronic_disease,
       violent_behavior: this.model.violent_behavior,
+      role: this.model.role,
       created_at: this.model.created_at,
       updated_at: this.model.updated_at
     }

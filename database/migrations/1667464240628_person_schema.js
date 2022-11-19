@@ -12,6 +12,11 @@ class PersonSchema extends Schema {
         .string('id_card', 13)
         .notNullable()
         .unique()
+
+      table.string('username').nullable()
+
+      table.string('password').nullable()
+
       table.date('date_of_birth').notNullable()
       table.string('phone', 20)
       table.string('newborn', 1)
@@ -25,6 +30,8 @@ class PersonSchema extends Schema {
       table.boolean('chronic_disease').defaultTo(false)
 
       table.boolean('violent_behavior').defaultTo(false)
+
+      table.string('role', 1)
 
       table.timestamps()
     })

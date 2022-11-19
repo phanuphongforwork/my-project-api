@@ -58,6 +58,20 @@ class PersonController extends Controller {
 
     return this.success(response, null, 'Delete success')
   }
+
+  async me({ auth, response, request }) {
+    if (auth.user.role === '0') {
+      return this.fail(response, null, 'ไม่สามารถเข้าใช้งานได้')
+    }
+
+    const params = {
+      includes: ''
+    }
+
+    const user = await Service.getUserById(auth.user.person_id, params)
+
+    return this.success(response, await Transformer.asyncMake(user))
+  }
 }
 
 module.exports = PersonController

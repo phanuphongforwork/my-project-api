@@ -42,6 +42,22 @@ class PersonService extends Service {
 
     return query.toJSON()
   }
+
+  static async getByUsername(username) {
+    const user = await Model.query()
+      .where('username', username)
+      .first()
+
+    return user.toJSON()
+  }
+
+  static async getUserById(id, params = {}) {
+    const query = Model.parseQuery(params).where('person_id', id)
+
+    const user = await query.first()
+
+    return user.toJSON()
+  }
 }
 
 module.exports = PersonService

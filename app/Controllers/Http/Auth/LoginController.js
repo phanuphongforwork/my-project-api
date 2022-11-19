@@ -1,6 +1,6 @@
 'use strict'
 const Controller = use('App/Controllers/Http/Controller')
-const UserService = use('App/Services/UserService')
+const PersonService = use('App/Services/PersonService')
 
 class LoginController extends Controller {
   async index({ request, response, auth }) {
@@ -9,11 +9,9 @@ class LoginController extends Controller {
     let result
     try {
       result = await auth.attempt(username, password)
-      const user = await UserService.getByUsername(username)
+      const user = await PersonService.getByUsername(username)
 
-      console.log('user', user.status)
-
-      if (user.status !== '1') {
+      if (user.role === '0') {
         return this.fail(response, null, 'ไม่สามารถเข้าใช้งานได้')
       }
 
