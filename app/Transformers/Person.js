@@ -1,4 +1,5 @@
 const Transformer = use('App/Transformers/Transformer')
+const HouseholdMember = use('App/Models/HouseholdMember')
 
 class Person extends Transformer {
   async transform() {
@@ -15,8 +16,12 @@ class Person extends Transformer {
       chronic_disease: this.model.chronic_disease,
       violent_behavior: this.model.violent_behavior,
       role: this.model.role,
+      username: this.model.username,
       created_at: this.model.created_at,
-      updated_at: this.model.updated_at
+      updated_at: this.model.updated_at,
+      household_member: await HouseholdMember.query()
+        .where('person_id', this.model.person_id)
+        .first()
     }
   }
 }

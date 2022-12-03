@@ -22,7 +22,7 @@ class Person extends Model {
       }
     })
 
-    this.addTrait('ParseQuery', { searchableFields: [] })
+    this.addTrait('ParseQuery', { searchableFields: ['person_name', 'id_card'] })
   }
 }
 

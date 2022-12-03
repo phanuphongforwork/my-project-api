@@ -1,10 +1,32 @@
 const Service = use('App/Services/Service')
 const Model = use('App/Models/Person')
+const HouseholdMember = use('App/Models/HouseholdMember')
 
 class PersonService extends Service {
   static async getAll(params) {
     const { page, perPage, includes = '' } = params
     const model = Model.parseQuery(params)
+
+    const query = await model.paginate(page, perPage)
+
+    return query.toJSON()
+  }
+
+  static async getAvailable(params) {
+    const { page, perPage, includes = '' } = params
+
+    const members = await HouseholdMember.query()
+      .select('person_id')
+      .whereNotIn('member_status', ['1', '0'])
+      .fetch()
+
+    const memberJson = members.toJSON()
+
+    const membersIds = memberJson.map(item => {
+      return item.person_id
+    })
+
+    const model = Model.parseQuery(params).whereNotIn('person_id', membersIds)
 
     const query = await model.paginate(page, perPage)
 

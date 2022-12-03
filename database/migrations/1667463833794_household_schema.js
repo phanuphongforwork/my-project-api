@@ -6,7 +6,8 @@ const Schema = use('Schema')
 class HouseholdSchema extends Schema {
   up() {
     this.create('households', table => {
-      table.increments('hourse_id', 10)
+      table.increments('house_id', 10)
+      table.string('house_number')
       table
         .integer('comm_id', 4)
         .notNullable()
@@ -17,6 +18,11 @@ class HouseholdSchema extends Schema {
         .unsigned()
       table
         .integer('road_id', 4)
+        .notNullable()
+        .unsigned()
+
+      table
+        .integer('district_id', 4)
         .notNullable()
         .unsigned()
 
@@ -32,7 +38,7 @@ class HouseholdSchema extends Schema {
 
       table
         .integer('volunteer_id', 4)
-        .notNullable()
+        .nullable()()
         .unsigned()
 
       table.string('phone', 20).notNullable()

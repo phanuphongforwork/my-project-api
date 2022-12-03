@@ -13,13 +13,13 @@ class HouseHoldMemberController extends Controller {
 
   async store({ request, response }) {
     const payload = request.post()
-    const result = await Service.create(payload)
+    const result = await Service.createOrUpdate(payload)
 
     return this.success(response, await Transformer.asyncMake(result))
   }
 
   async show({ params, response, request }) {
-    const result = await Service.getById(params.house_id, params.person_id, request.get())
+    const result = await Service.getById(params.house_id, request.get())
 
     return this.success(response, await Transformer.asyncMake(result))
   }

@@ -13,6 +13,10 @@ class HouseholdMember extends Model {
 
     this.addTrait('ParseQuery', { searchableFields: [] })
   }
+
+  person() {
+    return this.hasOne('App/Models/Person', 'person_id', 'person_id')
+  }
 }
 
 module.exports = HouseholdMember

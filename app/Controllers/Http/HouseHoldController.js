@@ -6,12 +6,12 @@ const Transformer = use('App/Transformers/HouseHold')
 
 class HouseHoldController extends Controller {
   async index({ request, response, auth }) {
-    const result = await Service.getAll(request.get())
+    const result = await Service.getAll(request.get(), auth.user.role)
 
     return this.success(response, await Transformer.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
   }
 
-  async store({ request, response }) {
+  async store({ request, response, auth }) {
     const payload = request.post()
     const result = await Service.create(payload)
 

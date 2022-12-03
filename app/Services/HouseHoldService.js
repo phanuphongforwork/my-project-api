@@ -2,18 +2,23 @@ const Service = use('App/Services/Service')
 const Model = use('App/Models/Household')
 
 class HouseHoldService extends Service {
-  static async getAll(params) {
-    const { page, perPage, includes = '' } = params
+  static async getAll(params, role) {
+    const { page, perPage, includes = 'district,community,alley,road,subdistrict,person,volunteer' } = params
+
     const model = Model.parseQuery(params)
+
+    if (role !== '1') {
+      model.where('role', role)
+    }
 
     const query = await model.paginate(page, perPage)
 
-    return query.toJSON()
+    return await query.toJSON()
   }
 
   static async getById(id, params = {}) {
     const query = await Model.parseQuery(params)
-      .where('hourse_id', id)
+      .where('house_id', id)
       .first()
 
     return query.toJSON()
@@ -22,17 +27,25 @@ class HouseHoldService extends Service {
   static async create(payload) {
     const query = await Model.create(payload)
 
-    return query.toJSON()
+    const result = await Model.parseQuery({ includes: 'community,alley,road,subdistrict,person,volunteer,district' })
+      .where('house_id', query.house_id)
+      .first()
+
+    return result.toJSON()
   }
 
   static async update(id, payload) {
-    const query = await Model.findOrFail(id)
+    const query = await Model.findBy('house_id', id)
 
     query.merge(payload)
 
     await query.save()
 
-    return query.toJSON()
+    const result = await Model.parseQuery({ includes: 'community,alley,road,subdistrict,person,volunteer,district' })
+      .where('house_id', query.house_id)
+      .first()
+
+    return result.toJSON()
   }
 
   static async delete(id) {
