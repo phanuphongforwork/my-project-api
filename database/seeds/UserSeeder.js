@@ -20,7 +20,7 @@ class UserSeeder {
     await Database.truncate('persons')
     await Person.create({
       person_id: 1,
-      person_name: 'ผู่้ดูแลระบบ',
+      person_name: 'ผู้ดูแลระบบ',
       id_card: '1111111111111',
       username: 'admin',
       password: '123456',
