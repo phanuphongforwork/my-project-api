@@ -13,6 +13,8 @@ class PersonSchema extends Schema {
         .notNullable()
         .unique()
 
+      table.string('prefix').nullable()
+
       table.string('username').nullable()
 
       table.string('password').nullable()
@@ -31,7 +33,7 @@ class PersonSchema extends Schema {
 
       table.boolean('violent_behavior').defaultTo(false)
 
-      table.string('role', 1)
+      table.string('role', 1).defaultTo('3')
 
       table.timestamps()
     })

@@ -5,6 +5,7 @@ class Person extends Transformer {
   async transform() {
     return {
       person_id: this.model.person_id,
+      prefix: this.model.prefix,
       person_name: this.model.person_name,
       id_card: this.model.id_card,
       date_of_birth: this.model.date_of_birth,

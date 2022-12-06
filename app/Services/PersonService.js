@@ -1,11 +1,30 @@
+const auth = require('@adonisjs/auth')
+
 const Service = use('App/Services/Service')
 const Model = use('App/Models/Person')
 const HouseholdMember = use('App/Models/HouseholdMember')
 
 class PersonService extends Service {
-  static async getAll(params) {
+  static async getAll(params, user) {
     const { page, perPage, includes = '' } = params
     const model = Model.parseQuery(params)
+
+    if (user.role !== '1') {
+      const members = await HouseholdMember.query()
+        // .select('person_id')
+        .whereHas('household', builder => {
+          builder.where('volunteer_id', user.person_id)
+        })
+        .fetch()
+
+      const memberIds = await members.toJSON().map(member => {
+        return member.person_id
+      })
+
+      console.log(memberIds)
+
+      model.whereIn('person_id', memberIds)
+    }
 
     const query = await model.paginate(page, perPage)
 
@@ -17,7 +36,28 @@ class PersonService extends Service {
 
     const members = await HouseholdMember.query()
       .select('person_id')
-      .whereNotIn('member_status', ['1', '0'])
+      .whereIn('status', ['1', '0'])
+      .fetch()
+
+    const memberJson = members.toJSON()
+
+    const membersIds = memberJson.map(item => {
+      return item.person_id
+    })
+
+    const model = Model.parseQuery(params).whereNotIn('person_id', membersIds)
+
+    const query = await model.paginate(page, perPage)
+
+    return query.toJSON()
+  }
+
+  static async getHeadHouse(params) {
+    const { page, perPage, includes = '', houseId = null } = params
+
+    const members = await HouseholdMember.query()
+      .select('person_id')
+      .where('member_status', '2')
       .fetch()
 
     const memberJson = members.toJSON()

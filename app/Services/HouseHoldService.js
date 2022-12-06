@@ -1,19 +1,31 @@
 const Service = use('App/Services/Service')
 const Model = use('App/Models/Household')
+const HouseholdMember = use('App/Models/HouseholdMember')
 
 class HouseHoldService extends Service {
-  static async getAll(params, role) {
+  static async getAll(params, role, userId) {
     const { page, perPage, includes = 'district,community,alley,road,subdistrict,person,volunteer' } = params
 
     const model = Model.parseQuery(params)
 
     if (role !== '1') {
-      model.where('role', role)
+      model.where('volunteer_id', userId)
     }
 
     const query = await model.paginate(page, perPage)
 
     return await query.toJSON()
+  }
+
+  static async getUserInHouse(id) {
+    const model = await HouseholdMember.parseQuery()
+      .select('person_id')
+      .where('house_id', id)
+      .where('status', '1')
+      .load('person')
+      .fetch()
+
+    return await model.toJSON()
   }
 
   static async getById(id, params = {}) {

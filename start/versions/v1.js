@@ -28,6 +28,7 @@ Route.group(() => {
 
   Route.resource('districts', 'DistrictController').only(['index', 'show', 'store', 'update', 'destroy '])
 
+  Route.get('house-holds/getUserInHouse', 'PersonController.getUserInHouse')
   Route.resource('house-holds', 'HouseHoldController').only(['index', 'show', 'store', 'update', 'destroy '])
 
   Route.get('persons/available', 'PersonController.getAvailable')

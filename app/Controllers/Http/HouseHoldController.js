@@ -3,12 +3,19 @@
 const Controller = use('App/Controllers/Http/Controller')
 const Service = use('App/Services/HouseHoldService')
 const Transformer = use('App/Transformers/HouseHold')
+const PersonTransformer = use('App/Transformers/Person')
 
 class HouseHoldController extends Controller {
   async index({ request, response, auth }) {
-    const result = await Service.getAll(request.get(), auth.user.role)
+    const result = await Service.getAll(request.get(), auth.user.role, auth.user.person_id)
 
     return this.success(response, await Transformer.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
+  }
+
+  async getUserInHouse({ request, response, auth, params }) {
+    const result = await Service.getUserInHouse(params.id)
+
+    return this.success(response, await PersonTransformer.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
   }
 
   async store({ request, response, auth }) {

@@ -17,6 +17,10 @@ class HouseholdMember extends Model {
   person() {
     return this.hasOne('App/Models/Person', 'person_id', 'person_id')
   }
+
+  household() {
+    return this.hasOne('App/Models/Household', 'house_id', 'house_id')
+  }
 }
 
 module.exports = HouseholdMember

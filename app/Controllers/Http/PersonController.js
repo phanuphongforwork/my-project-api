@@ -6,7 +6,7 @@ const Transformer = use('App/Transformers/Person')
 
 class PersonController extends Controller {
   async index({ request, response, auth }) {
-    const result = await Service.getAll(request.get())
+    const result = await Service.getAll(request.get(), auth.user)
 
     return this.success(response, await Transformer.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
   }
