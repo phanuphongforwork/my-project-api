@@ -8,7 +8,7 @@
     "dev": "adonis serve --dev",
     "start": "node server.js",
     "test": "node ace test",
-    "build": "adonis serve --dev && adonis migration:run && adonis seed"
+    "build": "npm install && adonis serve --dev && adonis migration:run && adonis seed"
   },
   "keywords": [
     "adonisjs",
