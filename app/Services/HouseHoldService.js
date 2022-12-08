@@ -18,14 +18,15 @@ class HouseHoldService extends Service {
   }
 
   static async getUserInHouse(id) {
-    const model = await HouseholdMember.parseQuery()
-      .select('person_id')
+    const model = HouseholdMember.parseQuery({
+      includes: 'person'
+    })
       .where('house_id', id)
       .where('status', '1')
-      .load('person')
-      .fetch()
 
-    return await model.toJSON()
+    const query = await model.paginate(1, 500)
+
+    return await query.toJSON()
   }
 
   static async getById(id, params = {}) {

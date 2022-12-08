@@ -24,7 +24,7 @@ class UserSeeder {
       id_card: '1111111111111',
       username: 'admin',
       password: '123456',
-      date_of_birth: '2565-11-01',
+      date_of_birth: '2542-01-01',
       phone: '0999999999',
       role: '1'
     })
