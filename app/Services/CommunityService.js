@@ -3,12 +3,14 @@ const Model = use('App/Models/Community')
 
 class CommunityService extends Service {
   static async getAll(params) {
-    const { page, perPage, includes = '' } = params
+    const { page, perPage, includes = 'subdistrict' } = params
     const model = Model.parseQuery(params)
 
     const query = await model.paginate(page, perPage)
 
-    return query.toJSON()
+    console.log(await query.toJSON())
+
+    return await query.toJSON()
   }
 
   static async getById(id, params = {}) {

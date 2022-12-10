@@ -7,7 +7,8 @@ class Alley extends Transformer {
       alley_name: this.model.alley_name,
       subdistrict_id: this.model.subdistrict_id,
       created_at: this.model.created_at,
-      updated_at: this.model.updated_at
+      updated_at: this.model.updated_at,
+      subdistrict: this.model.subdistrict ?? null
     }
   }
 }

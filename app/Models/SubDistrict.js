@@ -17,6 +17,10 @@ class SubDistrict extends Model {
 
     this.addTrait('ParseQuery', { searchableFields: [] })
   }
+
+  district() {
+    return this.hasOne('App/Models/District', 'district_id', 'district_id')
+  }
 }
 
 module.exports = SubDistrict

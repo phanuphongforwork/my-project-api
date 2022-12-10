@@ -8,7 +8,8 @@ class SubDistrict extends Transformer {
       post_code: this.model.post_code,
       district_id: this.model.district_id,
       created_at: this.model.created_at,
-      updated_at: this.model.updated_at
+      updated_at: this.model.updated_at,
+      district: this.model.district ?? null
     }
   }
 }

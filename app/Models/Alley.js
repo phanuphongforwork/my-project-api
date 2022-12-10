@@ -16,6 +16,10 @@ class Alley extends Model {
 
     this.addTrait('ParseQuery', { searchableFields: [] })
   }
+
+  subdistrict() {
+    return this.hasOne('App/Models/SubDistrict', 'subdistrict_id', 'subdistrict_id')
+  }
 }
 
 module.exports = Alley
