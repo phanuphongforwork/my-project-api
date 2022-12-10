@@ -29,7 +29,7 @@ class CommunityBoardService extends Service {
 
     if (idCard && committeeId) {
       model.where('committee_id', committeeId).whereHas('person', person => {
-        person.where('id_card', idCard).or.where('person_name', idCard)
+        person.where('id_card', idCard)
       })
     }
 
