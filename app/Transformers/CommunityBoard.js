@@ -9,7 +9,9 @@ class CommunityBoard extends Transformer {
       end_date: this.model.end_date,
       status: this.model.status,
       created_at: this.model.created_at,
-      updated_at: this.model.updated_at
+      updated_at: this.model.updated_at,
+      person: this.model.person ?? null,
+      committee: this.model.committee ?? null
     }
   }
 }

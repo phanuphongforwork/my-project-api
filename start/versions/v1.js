@@ -24,7 +24,8 @@ Route.group(() => {
 
   Route.resource('communities', 'CommunityController').only(['index', 'show', 'store', 'update', 'destroy '])
 
-  Route.resource('community_boards', 'CommunityBoardController').only(['index', 'show', 'store', 'update', 'destroy '])
+  Route.get('community-boards/get-available', 'CommunityBoardController.getAvailable')
+  Route.resource('community-boards', 'CommunityBoardController').only(['index', 'show', 'store', 'update', 'destroy '])
 
   Route.resource('districts', 'DistrictController').only(['index', 'show', 'store', 'update', 'destroy '])
 

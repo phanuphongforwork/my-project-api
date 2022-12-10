@@ -17,6 +17,13 @@ class CommunityBoard extends Model {
 
     this.addTrait('ParseQuery', { searchableFields: [] })
   }
+  person() {
+    return this.hasOne('App/Models/Person', 'person_id', 'person_id')
+  }
+
+  committee() {
+    return this.hasOne('App/Models/Committee', 'committee_id', 'committee_id')
+  }
 }
 
 module.exports = CommunityBoard
