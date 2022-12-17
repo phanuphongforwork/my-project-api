@@ -18,6 +18,12 @@ class HouseHoldController extends Controller {
     return this.success(response, await HouseHoldMember.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
   }
 
+  async getMyHouse({ request, response, auth, params }) {
+    const result = await Service.getMyHouse(request.get(), auth.user.person_id)
+
+    return this.success(response, await Transformer.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
+  }
+
   async store({ request, response, auth }) {
     const payload = request.post()
     const result = await Service.create(payload)

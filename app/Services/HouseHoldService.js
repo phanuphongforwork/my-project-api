@@ -6,13 +6,36 @@ class HouseHoldService extends Service {
   static async getAll(params, role, userId) {
     const { page, perPage, includes = 'district,community,alley,road,subdistrict,person,volunteer' } = params
 
-    const model = Model.parseQuery(params)
+    const model = Model.parseQuery(params).with('members', builder => {
+      builder.where('status', '1').with('person')
+    })
 
     if (role !== '1') {
       model.where('volunteer_id', userId)
     }
 
     const query = await model.paginate(page, perPage)
+
+    return await query.toJSON()
+  }
+
+  static async getMyHouse(params, userId) {
+    const { page, perPage, includes = 'district,community,alley,road,subdistrict,person,volunteer' } = params
+
+    const house = await HouseholdMember.query()
+      .where('person_id', userId)
+      .where('status', '1')
+      .first()
+
+    const model = Model.parseQuery({ includes: 'district,community,alley,road,subdistrict,person,volunteer' })
+      .where('house_id', house.house_id)
+      .with('members', builder => {
+        builder.with('person')
+      })
+
+    const query = await model.paginate(1, 20)
+
+    console.log(await query.toJSON())
 
     return await query.toJSON()
   }

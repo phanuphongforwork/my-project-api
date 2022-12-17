@@ -13,19 +13,37 @@ class CommunityBoardService extends Service {
     return query.toJSON()
   }
   static async getAvailable(params) {
-    const { idCard = '', committeeId = '' } = params
+    const { idCard = '', committeeId = '', year = '' } = params
     const model = Model.parseQuery({
       perPage: 1000,
       includes: 'person,committee'
-    })
-      .where('status', '1')
-      .where(
+    }).where('status', '1')
+
+    if (year) {
+      model
+        .where(
+          'start_date',
+          '>=',
+          dayjs(year)
+            .startOf('year')
+            .format('YYYY-MM-DD')
+        )
+        .where(
+          'end_date',
+          '<=',
+          dayjs(year)
+            .endOf('year')
+            .format('YYYY-MM-DD')
+        )
+    } else {
+      model.where(
         'start_date',
         '>=',
         dayjs()
           .startOf('year')
           .format('YYYY-MM-DD')
       )
+    }
 
     if (idCard && committeeId) {
       model.where('committee_id', committeeId).whereHas('person', person => {

@@ -45,6 +45,10 @@ class Household extends Model {
   district() {
     return this.hasOne('App/Models/District', 'district_id', 'district_id')
   }
+
+  members() {
+    return this.hasMany('App/Models/HouseholdMember', 'house_id', 'house_id')
+  }
 }
 
 module.exports = Household

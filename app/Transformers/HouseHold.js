@@ -21,7 +21,8 @@ class HouseHold extends Transformer {
       person: this.model?.person || null,
       district: this.model?.district || null,
       subdistrict: this.model?.subdistrict || null,
-      volunteer: this.model?.volunteer || null
+      volunteer: this.model?.volunteer || null,
+      members: this.model?.members || null
     }
   }
 }
