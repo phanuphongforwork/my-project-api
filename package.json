@@ -14,7 +14,7 @@
     "adonisjs",
     "adonis-app"
   ],
-  "author": "Akaradech Sutheesuntornkul",
+  "author": "Phanuphong Machai",
   "license": "PRIVATE",
   "private": true,
   "dependencies": {
