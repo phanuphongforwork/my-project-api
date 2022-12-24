@@ -1,0 +1,1185 @@
+[
+  {
+    "subdistrict": 100101,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "พระบรมมหาราชวัง",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100102,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "วังบูรพาภิรมย์",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100103,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "วัดราชบพิธ",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100104,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "สำราญราษฎร์",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100105,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "ศาลเจ้าพ่อเสือ",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100106,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "เสาชิงช้า",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100107,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "บวรนิเวศ",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100108,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "ตลาดยอด",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100109,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "ชนะสงคราม",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100110,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "บ้านพานถม",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100111,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "บางขุนพรหม",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100112,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระนคร",
+    "name": "วัดสามพระยา",
+    "code": 10200
+  },
+  {
+    "subdistrict": 100201,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดุสิต",
+    "name": "ดุสิต",
+    "code": 10300
+  },
+  {
+    "subdistrict": 100202,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดุสิต",
+    "name": "วชิรพยาบาล",
+    "code": 10300
+  },
+  {
+    "subdistrict": 100203,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดุสิต",
+    "name": "สวนจิตรลดา",
+    "code": 10300
+  },
+  {
+    "subdistrict": 100204,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดุสิต",
+    "name": "สี่แยกมหานาค",
+    "code": 10300
+  },
+  {
+    "subdistrict": 100206,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดุสิต",
+    "name": "ถนนนครไชยศรี",
+    "code": 10300
+  },
+  {
+    "subdistrict": 100301,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองจอก",
+    "name": "กระทุ่มราย",
+    "code": 10530
+  },
+  {
+    "subdistrict": 100302,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองจอก",
+    "name": "หนองจอก",
+    "code": 10530
+  },
+  {
+    "subdistrict": 100303,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองจอก",
+    "name": "คลองสิบ",
+    "code": 10530
+  },
+  {
+    "subdistrict": 100304,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองจอก",
+    "name": "คลองสิบสอง",
+    "code": 10530
+  },
+  {
+    "subdistrict": 100305,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองจอก",
+    "name": "โคกแฝด",
+    "code": 10530
+  },
+  {
+    "subdistrict": 100306,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองจอก",
+    "name": "คู้ฝั่งเหนือ",
+    "code": 10530
+  },
+  {
+    "subdistrict": 100307,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองจอก",
+    "name": "ลำผักชี",
+    "code": 10530
+  },
+  {
+    "subdistrict": 100308,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองจอก",
+    "name": "ลำต้อยติ่ง",
+    "code": 10530
+  },
+  {
+    "subdistrict": 100401,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางรัก",
+    "name": "มหาพฤฒาราม",
+    "code": 10500
+  },
+  {
+    "subdistrict": 100402,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางรัก",
+    "name": "สีลม",
+    "code": 10500
+  },
+  {
+    "subdistrict": 100403,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางรัก",
+    "name": "สุริยวงศ์",
+    "code": 10500
+  },
+  {
+    "subdistrict": 100404,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางรัก",
+    "name": "บางรัก",
+    "code": 10500
+  },
+  {
+    "subdistrict": 100405,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางรัก",
+    "name": "สี่พระยา",
+    "code": 10500
+  },
+  {
+    "subdistrict": 100502,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางเขน",
+    "name": "อนุสาวรีย์",
+    "code": 10220
+  },
+  {
+    "subdistrict": 100508,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางเขน",
+    "name": "ท่าแร้ง",
+    "code": 10220
+  },
+  {
+    "subdistrict": 100601,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกะปิ",
+    "name": "คลองจั่น",
+    "code": 10240
+  },
+  {
+    "subdistrict": 100608,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกะปิ",
+    "name": "หัวหมาก",
+    "code": 10240
+  },
+  {
+    "subdistrict": 100701,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตปทุมวัน",
+    "name": "รองเมือง",
+    "code": 10330
+  },
+  {
+    "subdistrict": 100702,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตปทุมวัน",
+    "name": "วังใหม่",
+    "code": 10330
+  },
+  {
+    "subdistrict": 100703,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตปทุมวัน",
+    "name": "ปทุมวัน",
+    "code": 10330
+  },
+  {
+    "subdistrict": 100704,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตปทุมวัน",
+    "name": "ลุมพินี",
+    "code": 10330
+  },
+  {
+    "subdistrict": 100801,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตป้อมปราบศัตรูพ่าย",
+    "name": "ป้อมปราบ",
+    "code": 10100
+  },
+  {
+    "subdistrict": 100802,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตป้อมปราบศัตรูพ่าย",
+    "name": "วัดเทพศิรินทร์",
+    "code": 10100
+  },
+  {
+    "subdistrict": 100803,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตป้อมปราบศัตรูพ่าย",
+    "name": "คลองมหานาค",
+    "code": 10100
+  },
+  {
+    "subdistrict": 100804,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตป้อมปราบศัตรูพ่าย",
+    "name": "บ้านบาตร",
+    "code": 10100
+  },
+  {
+    "subdistrict": 100805,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตป้อมปราบศัตรูพ่าย",
+    "name": "วัดโสมนัส",
+    "code": 10100
+  },
+  {
+    "subdistrict": 100905,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพระโขนง",
+    "name": "บางจาก",
+    "code": 10260
+  },
+  {
+    "subdistrict": 101001,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตมีนบุรี",
+    "name": "มีนบุรี",
+    "code": 10510
+  },
+  {
+    "subdistrict": 101002,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตมีนบุรี",
+    "name": "แสนแสบ",
+    "code": 10510
+  },
+  {
+    "subdistrict": 101101,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตลาดกระบัง",
+    "name": "ลาดกระบัง",
+    "code": 10520
+  },
+  {
+    "subdistrict": 101102,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตลาดกระบัง",
+    "name": "คลองสองต้นนุ่น",
+    "code": 10520
+  },
+  {
+    "subdistrict": 101103,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตลาดกระบัง",
+    "name": "คลองสามประเวศ",
+    "code": 10520
+  },
+  {
+    "subdistrict": 101104,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตลาดกระบัง",
+    "name": "ลำปลาทิว",
+    "code": 10520
+  },
+  {
+    "subdistrict": 101105,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตลาดกระบัง",
+    "name": "ทับยาว",
+    "code": 10520
+  },
+  {
+    "subdistrict": 101106,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตลาดกระบัง",
+    "name": "ขุมทอง",
+    "code": 10520
+  },
+  {
+    "subdistrict": 101203,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตยานนาวา",
+    "name": "ช่องนนทรี",
+    "code": 10120
+  },
+  {
+    "subdistrict": 101204,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตยานนาวา",
+    "name": "บางโพงพาง",
+    "code": 10120
+  },
+  {
+    "subdistrict": 101301,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสัมพันธวงศ์",
+    "name": "จักรวรรดิ",
+    "code": 10100
+  },
+  {
+    "subdistrict": 101302,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสัมพันธวงศ์",
+    "name": "สัมพันธวงศ์",
+    "code": 10100
+  },
+  {
+    "subdistrict": 101303,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสัมพันธวงศ์",
+    "name": "ตลาดน้อย",
+    "code": 10100
+  },
+  {
+    "subdistrict": 101401,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตพญาไท",
+    "name": "สามเสนใน",
+    "code": 10400
+  },
+  {
+    "subdistrict": 101501,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตธนบุรี",
+    "name": "วัดกัลยาณ์",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101502,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตธนบุรี",
+    "name": "หิรัญรูจี",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101503,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตธนบุรี",
+    "name": "บางยี่เรือ",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101504,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตธนบุรี",
+    "name": "บุคคโล",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101505,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตธนบุรี",
+    "name": "ตลาดพลู",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101506,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตธนบุรี",
+    "name": "ดาวคะนอง",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101507,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตธนบุรี",
+    "name": "สำเหร่",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101601,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกอกใหญ่",
+    "name": "วัดอรุณ",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101602,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกอกใหญ่",
+    "name": "วัดท่าพระ",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101701,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตห้วยขวาง",
+    "name": "ห้วยขวาง",
+    "code": 10310
+  },
+  {
+    "subdistrict": 101702,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตห้วยขวาง",
+    "name": "บางกะปิ",
+    "code": 10310
+  },
+  {
+    "subdistrict": 101704,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตห้วยขวาง",
+    "name": "สามเสนนอก",
+    "code": 10310
+  },
+  {
+    "subdistrict": 101801,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสาน",
+    "name": "สมเด็จเจ้าพระยา",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101802,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสาน",
+    "name": "คลองสาน",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101803,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสาน",
+    "name": "บางลำภูล่าง",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101804,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสาน",
+    "name": "คลองต้นไทร",
+    "code": 10600
+  },
+  {
+    "subdistrict": 101901,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตตลิ่งชัน",
+    "name": "คลองชักพระ",
+    "code": 10170
+  },
+  {
+    "subdistrict": 101902,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตตลิ่งชัน",
+    "name": "ตลิ่งชัน",
+    "code": 10170
+  },
+  {
+    "subdistrict": 101903,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตตลิ่งชัน",
+    "name": "ฉิมพลี",
+    "code": 10170
+  },
+  {
+    "subdistrict": 101904,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตตลิ่งชัน",
+    "name": "บางพรม",
+    "code": 10170
+  },
+  {
+    "subdistrict": 101905,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตตลิ่งชัน",
+    "name": "บางระมาด",
+    "code": 10170
+  },
+  {
+    "subdistrict": 101907,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตตลิ่งชัน",
+    "name": "บางเชือกหนัง",
+    "code": 10170
+  },
+  {
+    "subdistrict": 102004,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกอกน้อย",
+    "name": "ศิริราช",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102005,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกอกน้อย",
+    "name": "บ้านช่างหล่อ",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102006,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกอกน้อย",
+    "name": "บางขุนนนท์",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102007,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกอกน้อย",
+    "name": "บางขุนศรี",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102009,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางกอกน้อย",
+    "name": "อรุณอมรินทร์",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102105,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางขุนเทียน",
+    "name": "ท่าข้าม",
+    "code": 10150
+  },
+  {
+    "subdistrict": 102107,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางขุนเทียน",
+    "name": "แสมดำ",
+    "code": 10150
+  },
+  {
+    "subdistrict": 102201,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตภาษีเจริญ",
+    "name": "บางหว้า",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102202,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตภาษีเจริญ",
+    "name": "บางด้วน",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102206,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตภาษีเจริญ",
+    "name": "บางจาก",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102207,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตภาษีเจริญ",
+    "name": "บางแวก",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102208,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตภาษีเจริญ",
+    "name": "คลองขวาง",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102209,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตภาษีเจริญ",
+    "name": "ปากคลองภาษีเจริญ",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102210,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตภาษีเจริญ",
+    "name": "คูหาสวรรค์",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102302,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองแขม",
+    "name": "หนองแขม",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102303,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหนองแขม",
+    "name": "หนองค้างพลู",
+    "code": 10160
+  },
+  {
+    "subdistrict": 102401,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตราษฎร์บูรณะ",
+    "name": "ราษฎร์บูรณะ",
+    "code": 10140
+  },
+  {
+    "subdistrict": 102402,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตราษฎร์บูรณะ",
+    "name": "บางปะกอก",
+    "code": 10140
+  },
+  {
+    "subdistrict": 102501,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางพลัด",
+    "name": "บางพลัด",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102502,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางพลัด",
+    "name": "บางอ้อ",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102503,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางพลัด",
+    "name": "บางบำหรุ",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102504,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางพลัด",
+    "name": "บางยี่ขัน",
+    "code": 10700
+  },
+  {
+    "subdistrict": 102601,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดินแดง",
+    "name": "ดินแดง",
+    "code": 10400
+  },
+  {
+    "subdistrict": 102701,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบึงกุ่ม",
+    "name": "คลองกุ่ม",
+    "code": 10240
+  },
+  {
+    "subdistrict": 102704,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบึงกุ่ม",
+    "name": "นวมินทร์",
+    "code": 10240
+  },
+  {
+    "subdistrict": 102705,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบึงกุ่ม",
+    "name": "นวลจันทร์",
+    "code": 10240
+  },
+  {
+    "subdistrict": 102801,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสาทร",
+    "name": "ทุ่งวัดดอน",
+    "code": 10120
+  },
+  {
+    "subdistrict": 102802,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสาทร",
+    "name": "ยานนาวา",
+    "code": 10120
+  },
+  {
+    "subdistrict": 102803,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสาทร",
+    "name": "ทุ่งมหาเมฆ",
+    "code": 10120
+  },
+  {
+    "subdistrict": 102901,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางซื่อ",
+    "name": "บางซื่อ",
+    "code": 10800
+  },
+  {
+    "subdistrict": 102902,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางซื่อ",
+    "name": "วงศ์สว่าง",
+    "code": 10800
+  },
+  {
+    "subdistrict": 103001,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจตุจักร",
+    "name": "ลาดยาว",
+    "code": 10900
+  },
+  {
+    "subdistrict": 103002,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจตุจักร",
+    "name": "เสนานิคม",
+    "code": 10900
+  },
+  {
+    "subdistrict": 103003,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจตุจักร",
+    "name": "จันทรเกษม",
+    "code": 10900
+  },
+  {
+    "subdistrict": 103004,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจตุจักร",
+    "name": "จอมพล",
+    "code": 10900
+  },
+  {
+    "subdistrict": 103005,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจตุจักร",
+    "name": "จตุจักร",
+    "code": 10900
+  },
+  {
+    "subdistrict": 103101,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางคอแหลม",
+    "name": "บางคอแหลม",
+    "code": 10120
+  },
+  {
+    "subdistrict": 103102,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางคอแหลม",
+    "name": "วัดพระยาไกร",
+    "code": 10120
+  },
+  {
+    "subdistrict": 103103,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางคอแหลม",
+    "name": "บางโคล่",
+    "code": 10120
+  },
+  {
+    "subdistrict": 103201,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตประเวศ",
+    "name": "ประเวศ",
+    "code": 10250
+  },
+  {
+    "subdistrict": 103202,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตประเวศ",
+    "name": "หนองบอน",
+    "code": 10250
+  },
+  {
+    "subdistrict": 103203,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตประเวศ",
+    "name": "ดอกไม้",
+    "code": 10250
+  },
+  {
+    "subdistrict": 103301,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองเตย",
+    "name": "คลองเตย",
+    "code": 10110
+  },
+  {
+    "subdistrict": 103302,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองเตย",
+    "name": "คลองตัน",
+    "code": 10110
+  },
+  {
+    "subdistrict": 103303,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองเตย",
+    "name": "พระโขนง",
+    "code": 10110
+  },
+  {
+    "subdistrict": 103401,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสวนหลวง",
+    "name": "สวนหลวง",
+    "code": 10250
+  },
+  {
+    "subdistrict": 103501,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจอมทอง",
+    "name": "บางขุนเทียน",
+    "code": 10150
+  },
+  {
+    "subdistrict": 103502,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจอมทอง",
+    "name": "บางค้อ",
+    "code": 10150
+  },
+  {
+    "subdistrict": 103503,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจอมทอง",
+    "name": "บางมด",
+    "code": 10150
+  },
+  {
+    "subdistrict": 103504,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตจอมทอง",
+    "name": "จอมทอง",
+    "code": 10150
+  },
+  {
+    "subdistrict": 103602,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดอนเมือง",
+    "name": "สีกัน",
+    "code": 10210
+  },
+  {
+    "subdistrict": 103604,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดอนเมือง",
+    "name": "ดอนเมือง",
+    "code": 10210
+  },
+  {
+    "subdistrict": 103605,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตดอนเมือง",
+    "name": "สนามบิน",
+    "code": 10210
+  },
+  {
+    "subdistrict": 103701,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตราชเทวี",
+    "name": "ทุ่งพญาไท",
+    "code": 10400
+  },
+  {
+    "subdistrict": 103702,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตราชเทวี",
+    "name": "ถนนพญาไท",
+    "code": 10400
+  },
+  {
+    "subdistrict": 103703,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตราชเทวี",
+    "name": "ถนนเพชรบุรี",
+    "code": 10400
+  },
+  {
+    "subdistrict": 103704,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตราชเทวี",
+    "name": "มักกะสัน",
+    "code": 10400
+  },
+  {
+    "subdistrict": 103801,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตลาดพร้าว",
+    "name": "ลาดพร้าว",
+    "code": 10230
+  },
+  {
+    "subdistrict": 103802,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตลาดพร้าว",
+    "name": "จรเข้บัว",
+    "code": 10230
+  },
+  {
+    "subdistrict": 103901,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตวัฒนา",
+    "name": "คลองเตยเหนือ",
+    "code": 10110
+  },
+  {
+    "subdistrict": 103902,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตวัฒนา",
+    "name": "คลองตันเหนือ",
+    "code": 10110
+  },
+  {
+    "subdistrict": 103903,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตวัฒนา",
+    "name": "พระโขนงเหนือ",
+    "code": 10110
+  },
+  {
+    "subdistrict": 104001,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางแค",
+    "name": "บางแค",
+    "code": 10160
+  },
+  {
+    "subdistrict": 104002,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางแค",
+    "name": "บางแคเหนือ",
+    "code": 10160
+  },
+  {
+    "subdistrict": 104003,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางแค",
+    "name": "บางไผ่",
+    "code": 10160
+  },
+  {
+    "subdistrict": 104004,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางแค",
+    "name": "หลักสอง",
+    "code": 10160
+  },
+  {
+    "subdistrict": 104101,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหลักสี่",
+    "name": "ทุ่งสองห้อง",
+    "code": 10210
+  },
+  {
+    "subdistrict": 104102,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตหลักสี่",
+    "name": "ตลาดบางเขน",
+    "code": 10210
+  },
+  {
+    "subdistrict": 104201,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสายไหม",
+    "name": "สายไหม",
+    "code": 10220
+  },
+  {
+    "subdistrict": 104202,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสายไหม",
+    "name": "ออเงิน",
+    "code": 10220
+  },
+  {
+    "subdistrict": 104203,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสายไหม",
+    "name": "คลองถนน",
+    "code": 10220
+  },
+  {
+    "subdistrict": 104301,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคันนายาว",
+    "name": "คันนายาว",
+    "code": 10230
+  },
+  {
+    "subdistrict": 104302,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคันนายาว",
+    "name": "รามอินทรา",
+    "code": 10230
+  },
+  {
+    "subdistrict": 104401,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตสะพานสูง",
+    "name": "สะพานสูง",
+    "code": 10240
+  },
+  {
+    "subdistrict": 104501,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตวังทองหลาง",
+    "name": "วังทองหลาง",
+    "code": 10310
+  },
+  {
+    "subdistrict": 104502,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตวังทองหลาง",
+    "name": "สะพานสอง",
+    "code": 10310
+  },
+  {
+    "subdistrict": 104503,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตวังทองหลาง",
+    "name": "คลองเจ้าคุณสิงห์",
+    "code": 10310
+  },
+  {
+    "subdistrict": 104504,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตวังทองหลาง",
+    "name": "พลับพลา",
+    "code": 10310
+  },
+  {
+    "subdistrict": 104601,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสามวา",
+    "name": "สามวาตะวันตก",
+    "code": 10510
+  },
+  {
+    "subdistrict": 104602,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสามวา",
+    "name": "สามวาตะวันออก",
+    "code": 10510
+  },
+  {
+    "subdistrict": 104603,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสามวา",
+    "name": "บางชัน",
+    "code": 10510
+  },
+  {
+    "subdistrict": 104604,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสามวา",
+    "name": "ทรายกองดิน",
+    "code": 10510
+  },
+  {
+    "subdistrict": 104605,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตคลองสามวา",
+    "name": "ทรายกองดินใต้",
+    "code": 10510
+  },
+  {
+    "subdistrict": 104701,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางนา",
+    "name": "บางนา",
+    "code": 10260
+  },
+  {
+    "subdistrict": 104801,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตทวีวัฒนา",
+    "name": "ทวีวัฒนา",
+    "code": 10170
+  },
+  {
+    "subdistrict": 104802,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตทวีวัฒนา",
+    "name": "ศาลาธรรมสพน์",
+    "code": 10170
+  },
+  {
+    "subdistrict": 104901,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตทุ่งครุ",
+    "name": "บางมด",
+    "code": 10140
+  },
+  {
+    "subdistrict": 104902,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตทุ่งครุ",
+    "name": "ทุ่งครุ",
+    "code": 10140
+  },
+  {
+    "subdistrict": 105001,
+    "province": "กรุงเทพมหานคร",
+    "district": "เขตบางบอน",
+    "name": "บางบอน",
+    "code": 10150
+  }
+]

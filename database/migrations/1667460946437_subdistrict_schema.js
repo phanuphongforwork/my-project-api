@@ -7,10 +7,8 @@ class SubdistrictSchema extends Schema {
   up() {
     this.create('subdistricts', table => {
       table.increments('subdistrict_id', 6)
-      table
-        .string('subdistrict_name')
-        .notNullable()
-        .unique()
+      table.string('subdistrict_name').notNullable()
+
       table
         .integer('district_id', 4)
         .notNullable()

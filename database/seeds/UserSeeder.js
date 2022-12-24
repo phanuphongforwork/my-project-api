@@ -17,17 +17,24 @@ const Database = use('Database')
 
 class UserSeeder {
   async run() {
-    await Database.truncate('persons')
-    await Person.create({
-      person_id: 1,
-      person_name: 'ผู้ดูแลระบบ',
-      id_card: '1111111111111',
-      username: 'admin',
-      password: '123456',
-      date_of_birth: '2542-01-01',
-      phone: '0999999999',
-      role: '1'
-    })
+    // await Database.truncate('persons')
+
+    const person = Person.query()
+      .where('username', 'admin')
+      .first()
+
+    if (!person) {
+      await Person.create({
+        person_id: 1,
+        person_name: 'ผู้ดูแลระบบ',
+        id_card: '1111111111111',
+        username: 'admin',
+        password: '123456',
+        date_of_birth: '2542-01-01',
+        phone: '0999999999',
+        role: '1'
+      })
+    }
   }
 }
 
