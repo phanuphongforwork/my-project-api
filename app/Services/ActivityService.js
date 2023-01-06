@@ -1,5 +1,5 @@
 const Service = use('App/Services/Service')
-const Model = use('App/Models/Road')
+const Model = use('App/Models/Activity')
 
 class ActivityService extends Service {
   static async getAll(params) {
@@ -28,9 +28,17 @@ class ActivityService extends Service {
   static async update(id, payload) {
     const query = await Model.findOrFail(id)
 
-    query.merge(payload)
+    const { userIds, ...rest } = payload
+
+    query.merge(rest)
 
     await query.save()
+
+    await query.users().sync(userIds)
+
+    const result = await Model.parseQuery({ includes: 'users.person' })
+      .where('activity_id', query.activity_id)
+      .first()
 
     return query.toJSON()
   }

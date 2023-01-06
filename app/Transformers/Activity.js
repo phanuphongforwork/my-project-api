@@ -8,7 +8,7 @@ class Activity extends Transformer {
       activity_description: this.model.activity_description,
       activity_date: this.model.activity_date,
       status: this.model.status,
-      activity_users: this.model.activity_users ?? null,
+      users: this.model.users ?? null,
       created_at: this.model.created_at,
       updated_at: this.model.updated_at
     }

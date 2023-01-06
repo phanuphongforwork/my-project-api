@@ -16,6 +16,10 @@ class Activity extends Model {
 
     this.addTrait('ParseQuery', { searchableFields: [] })
   }
+
+  users() {
+    return this.hasMany('App/Models/ActivityUser', 'activity_id', 'activity_id')
+  }
 }
 
 module.exports = Activity
