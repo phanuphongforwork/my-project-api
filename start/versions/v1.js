@@ -20,6 +20,8 @@ Route.group(() => {
 
   Route.resource('alleys', 'AlleyController').only(['index', 'show', 'store', 'update', 'destroy '])
 
+  Route.resource('activities', 'ActivityController').only(['index', 'show', 'store', 'update', 'destroy '])
+
   Route.resource('committees', 'CommitteeController').only(['index', 'show', 'store', 'update', 'destroy '])
 
   Route.resource('communities', 'CommunityController').only(['index', 'show', 'store', 'update', 'destroy '])
