@@ -19,7 +19,7 @@ class UserSeeder {
   async run() {
     // await Database.truncate('persons')
 
-    const person = Person.query()
+    const person = await Person.query()
       .where('username', 'admin')
       .first()
 
