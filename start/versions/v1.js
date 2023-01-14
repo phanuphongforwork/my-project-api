@@ -16,6 +16,8 @@ Route.post('api/v1/auth/login', 'Auth/LoginController.index').middleware('guest'
 Route.get('api/v1/persons/me', 'PersonController.me').middleware(['auth'])
 
 Route.group(() => {
+  Route.resource('levels', 'LevelController').only(['index'])
+
   Route.resource('house-hold-members', 'HouseHoldMemberController').only(['index', 'store'])
 
   Route.resource('alleys', 'AlleyController').only(['index', 'show', 'store', 'update', 'destroy '])
@@ -35,6 +37,7 @@ Route.group(() => {
   Route.get('house-holds/:id/get-user-in-house', 'HouseHoldController.getUserInHouse')
   Route.resource('house-holds', 'HouseHoldController').only(['index', 'show', 'store', 'update', 'destroy '])
 
+  Route.post('persons/levels', 'PersonController.updatePersonLevel')
   Route.post('persons/not-in-activity', 'PersonController.getNotInActivity')
   Route.get('persons/available', 'PersonController.getAvailable')
   Route.resource('persons', 'PersonController').only(['index', 'show', 'store', 'update', 'destroy '])

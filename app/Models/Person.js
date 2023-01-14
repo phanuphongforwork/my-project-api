@@ -24,6 +24,10 @@ class Person extends Model {
 
     this.addTrait('ParseQuery', { searchableFields: ['person_name', 'id_card'] })
   }
+
+  levels() {
+    return this.hasMany('App/Models/User', 'person_id', 'person_id')
+  }
 }
 
 module.exports = Person

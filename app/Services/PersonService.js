@@ -3,6 +3,7 @@ const auth = require('@adonisjs/auth')
 const Service = use('App/Services/Service')
 const Model = use('App/Models/Person')
 const HouseholdMember = use('App/Models/HouseholdMember')
+const User = use('App/Models/User')
 
 class PersonService extends Service {
   static async getAll(params, user) {
@@ -129,6 +130,26 @@ class PersonService extends Service {
     const user = await query.first()
 
     return user.toJSON()
+  }
+
+  static async updatePersonLevel(personId, levelIds = []) {
+    const levels = await User.query()
+      .where('person_id', personId)
+      .delete()
+
+    if (levelIds && levelIds.length > 0) {
+      let payload = []
+
+      levelIds.forEach(level => {
+        payload.push({
+          level_id: level,
+          person_id: personId
+        })
+      })
+      await User.createMany(payload)
+    }
+
+    return success
   }
 }
 

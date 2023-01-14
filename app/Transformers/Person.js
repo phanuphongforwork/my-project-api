@@ -20,6 +20,7 @@ class Person extends Transformer {
       username: this.model.username,
       created_at: this.model.created_at,
       updated_at: this.model.updated_at,
+      levels: this.model.levels ?? null,
       household_member: await HouseholdMember.query()
         .where('person_id', this.model.person_id)
         .first()

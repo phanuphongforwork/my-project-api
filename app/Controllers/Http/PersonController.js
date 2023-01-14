@@ -84,6 +84,12 @@ class PersonController extends Controller {
 
     return this.success(response, await Transformer.asyncMake(user))
   }
+
+  async updatePersonLevel({ request, response, auth }) {
+    const result = await Service.updatePersonLevel(request.input('person_id'), request.input('level_ids'))
+
+    return this.success(response, 'success')
+  }
 }
 
 module.exports = PersonController
