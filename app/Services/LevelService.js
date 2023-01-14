@@ -1,8 +1,7 @@
 const auth = require('@adonisjs/auth')
 
 const Service = use('App/Services/Service')
-const Model = use('App/Models/Person')
-const HouseholdMember = use('App/Models/HouseholdMember')
+const Model = use('App/Models/Level')
 
 class LevelService extends Service {
   static async getAll(params) {

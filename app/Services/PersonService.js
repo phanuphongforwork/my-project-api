@@ -149,7 +149,7 @@ class PersonService extends Service {
       await User.createMany(payload)
     }
 
-    return success
+    return 'success'
   }
 }
 

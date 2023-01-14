@@ -1,7 +1,7 @@
 'use strict'
 
 const Controller = use('App/Controllers/Http/Controller')
-const Service = use('App/Services/PersonService')
+const Service = use('App/Services/LevelService')
 const Transformer = use('App/Transformers/Level')
 
 class LevelController extends Controller {
