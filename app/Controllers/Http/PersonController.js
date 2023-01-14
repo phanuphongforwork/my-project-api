@@ -17,6 +17,12 @@ class PersonController extends Controller {
     return this.success(response, await Transformer.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
   }
 
+  async getNotInActivity({ request, response, auth }) {
+    const result = await Service.getNotInActivity(request.get(), request.input('userIds'))
+
+    return this.success(response, await Transformer.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
+  }
+
   async store({ request, response }) {
     const payload = request.post()
     const result = await Service.create(payload)

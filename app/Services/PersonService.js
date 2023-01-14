@@ -52,6 +52,16 @@ class PersonService extends Service {
     return query.toJSON()
   }
 
+  static async getNotInActivity(params, userIds = []) {
+    const { page, perPage, includes = '' } = params
+
+    const model = Model.parseQuery(params).whereNotIn('person_id', userIds)
+
+    const query = await model.paginate(page, perPage)
+
+    return query.toJSON()
+  }
+
   static async getHeadHouse(params) {
     const { page, perPage, includes = '', houseId = null } = params
 

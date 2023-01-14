@@ -17,6 +17,10 @@ class ActivityUser extends Model {
   person() {
     return this.hasOne('App/Models/Person', 'person_id', 'person_id')
   }
+
+  activity() {
+    return this.hasOne('App/Models/Activity', 'activity_id', 'activity_id')
+  }
 }
 
 module.exports = ActivityUser
