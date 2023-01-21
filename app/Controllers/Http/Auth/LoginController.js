@@ -4,14 +4,15 @@ const PersonService = use('App/Services/PersonService')
 
 class LoginController extends Controller {
   async index({ request, response, auth }) {
-    const { username, password } = request.all()
+    const { username, password, role } = request.all()
 
     let result
     try {
       result = await auth.attempt(username, password)
-      const user = await PersonService.getByUsername(username)
 
-      if (user.role === '0') {
+      const user = await PersonService.getByUsername(username, role)
+
+      if (!user) {
         return this.fail(response, null, 'ไม่สามารถเข้าใช้งานได้')
       }
 

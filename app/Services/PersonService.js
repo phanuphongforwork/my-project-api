@@ -116,9 +116,12 @@ class PersonService extends Service {
     return query.toJSON()
   }
 
-  static async getByUsername(username) {
+  static async getByUsername(username, role) {
     const user = await Model.query()
       .where('username', username)
+      .whereHas('levels', builder => {
+        builder.where('level_id', role)
+      })
       .first()
 
     return user.toJSON()
