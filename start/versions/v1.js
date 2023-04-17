@@ -16,6 +16,8 @@ Route.post('api/v1/auth/login', 'Auth/LoginController.index').middleware('guest'
 Route.get('api/v1/persons/me', 'PersonController.me').middleware(['auth'])
 
 Route.group(() => {
+  Route.post('exports/house-holds', 'ExportController.houseHolds').middleware(['auth'])
+
   Route.resource('levels', 'LevelController').only(['index'])
 
   Route.resource('house-hold-members', 'HouseHoldMemberController').only(['index', 'store'])

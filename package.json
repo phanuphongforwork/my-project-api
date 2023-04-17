@@ -34,6 +34,7 @@
     "adonis-spreadsheet": "^1.0.1",
     "aws-sdk": "^2.631.0",
     "dayjs": "^1.11.7",
+    "exceljs": "^4.3.0",
     "lodash": "^4.17.15",
     "mysql": "^2.18.1",
     "sharp": "^0.25.2",

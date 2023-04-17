@@ -3,7 +3,7 @@ const Model = use('App/Models/Household')
 const HouseholdMember = use('App/Models/HouseholdMember')
 
 class HouseHoldService extends Service {
-  static async getAll(params, role, userId) {
+  static async getAll(params, role, userId, withOutPaginate = false) {
     const { page, perPage, includes = 'district,community,alley,road,subdistrict,person,volunteer' } = params
 
     const model = Model.parseQuery(params).with('members', builder => {
@@ -14,6 +14,10 @@ class HouseHoldService extends Service {
       model.where('volunteer_id', userId)
     }
 
+    if (withOutPaginate) {
+      const query = await model.fetch()
+      return await query.toJSON()
+    }
     const query = await model.paginate(page, perPage)
 
     return await query.toJSON()
