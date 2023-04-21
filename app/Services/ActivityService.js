@@ -1,11 +1,15 @@
 const Service = use('App/Services/Service')
 const Model = use('App/Models/Activity')
 const ActivityUser = use('App/Models/ActivityUser')
+const dayjs = require('dayjs')
+require('dayjs/locale/th')
+dayjs.locale('th')
 
 class ActivityService extends Service {
   static async getAll(params) {
-    const { page, perPage, includes = 'users' } = params
+    const { page = 1, perPage = 999, includes = 'users' } = params
     const model = Model.parseQuery(params).with('users.person')
+    console.log(model)
 
     const query = await model.paginate(page, perPage)
 
@@ -35,6 +39,8 @@ class ActivityService extends Service {
       activity_name: rest.activity_name,
       activity_date: rest.activity_date,
       activity_description: rest.activity_description,
+      agency_name: rest.agency_name,
+      location_name: rest.location_name,
       status: rest.status
     }
 
@@ -47,7 +53,8 @@ class ActivityService extends Service {
       newUserIds.forEach(person_id => {
         payloadNew.push({
           activity_id: id,
-          person_id: person_id
+          person_id: person_id,
+          join_date: dayjs().format('YYYY-MM-DD')
         })
       })
       await ActivityUser.createMany(payloadNew)
@@ -57,6 +64,7 @@ class ActivityService extends Service {
       await ActivityUser.query()
         .where('activity_id', id)
         .whereIn('person_id', deleteUserIds)
+
         .delete()
     }
 
@@ -64,7 +72,7 @@ class ActivityService extends Service {
       .where('activity_id', id)
       .first()
 
-    return query.toJSON()
+    return result.toJSON()
   }
 
   static async delete(id) {

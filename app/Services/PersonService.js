@@ -7,7 +7,16 @@ const User = use('App/Models/User')
 
 class PersonService extends Service {
   static async getAll(params, user) {
-    const { page, perPage, includes = '' } = params
+    const { page, perPage = 999, includes = '', isVolunteer = 0 } = params
+
+    if (isVolunteer === '1') {
+      const model = Model.parseQuery(params).whereHas('levels', builder => {
+        builder.where('level_id', 2)
+      })
+
+      const query = await model.paginate(1, 999)
+      return query.toJSON()
+    }
     const model = Model.parseQuery(params)
 
     if (user.role !== '1') {
@@ -21,8 +30,6 @@ class PersonService extends Service {
       const memberIds = await members.toJSON().map(member => {
         return member.person_id
       })
-
-      console.log(memberIds)
 
       model.whereIn('person_id', memberIds)
     }

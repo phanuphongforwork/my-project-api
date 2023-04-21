@@ -33,28 +33,114 @@ class ExportController extends Controller {
       { header: dayjs().format('MMM'), key: 'amount', width: 10, outlineLevel: 1 }
     ]
 
+    let allUsersCount = 0
+    let age1 = 0
+    let age2 = 0
+    let age3 = 0
+    let age4 = 0
+
+    let special1 = 0
+    let special2 = 0
+
+    let pregnant = 0
+
+    let afterPregnant = 0
+
+    let disabled = 0
+
+    let chronicDisease = 0
+
+    let violentBehavior = 0
+
+    houseHolds.forEach(house => {
+      const members = house?.members
+
+      members.forEach(member => {
+        const person = member?.person
+
+        if (person?.date_of_birth) {
+          const age = dayjs().diff(person?.date_of_birth, 'year')
+          if (Number(age) < 6) {
+            age1 += 1
+          }
+
+          if (Number(age) >= 6 && Number(age) < 35) {
+            age2 += 1
+          }
+
+          if (Number(age) >= 35 && Number(age) < 55) {
+            age3 += 1
+          }
+
+          if (Number(age) >= 35 && Number(age) <= 59) {
+            age3 += 1
+          }
+
+          if (Number(age) >= 60) {
+            age4 += 1
+          }
+        }
+
+        if (person?.newborn) {
+          if (person?.newborn === '1') {
+            special1 += 1
+          }
+          if (person?.newborn === '2') {
+            special2 += 1
+          }
+          if (person?.newborn === '3') {
+            special2 += 1
+          }
+        }
+
+        if (person?.pregnant === '1' || person?.pregnant === '2') {
+          pregnant += 1
+        }
+
+        if (person?.postpartum === '1' || person?.postpartum === 1) {
+          afterPregnant += 1
+        }
+
+        if (person?.disabled === '1' || person?.disabled === 1) {
+          disabled += 1
+        }
+
+        if (person?.chronic_disease === '1' || person?.chronic_disease === 1) {
+          chronicDisease += 1
+        }
+
+        if (person?.violent_behavior === '1' || person?.violent_behavior === 1) {
+          violentBehavior += 1
+        }
+
+        if (member?.status === '1') {
+          allUsersCount += 1
+        }
+      })
+    })
+
     worksheet.addRow({
       title: '๑.จำนวนครัวเรือนที่ดูแล',
       unit: 'ครัวเรือน',
-      amount: 10
+      amount: houseHolds?.length || 0
     })
 
     worksheet.addRow({
       title: '๒.จำนวนประชาชน',
       unit: 'คน',
-      amount: 20
+      amount: allUsersCount || 0
     })
 
-    worksheet.addRow({
-      title: '    ชาย',
-      unit: 'คน',
-      amount: 5
-    })
-    worksheet.addRow({
-      title: '    หญิง',
-      unit: 'คน',
-      amount: 15
-    })
+    // worksheet.addRow({
+    //   title: '    ชาย',
+    //   unit: 'คน',
+    //   amount: 5
+    // })
+    // worksheet.addRow({
+    //   title: '    หญิง',
+    //   unit: 'คน',
+    //   amount: 15
+    // })
 
     worksheet.addRow({
       title: '๓.แบ่งตามช่วงอายุ',
@@ -65,31 +151,25 @@ class ExportController extends Controller {
     worksheet.addRow({
       title: '    ต่ำกว่า ๖ ปี',
       unit: 'คน',
-      amount: '-'
-    })
-
-    worksheet.addRow({
-      title: '    ต่ำกว่า ๖ ปี',
-      unit: 'คน',
-      amount: '-'
+      amount: age1 || '-'
     })
 
     worksheet.addRow({
       title: '    ๖ - ๓๕ ปี',
       unit: 'คน',
-      amount: 4
+      amount: age2 || '-'
     })
 
     worksheet.addRow({
-      title: '    ๓๕ - ๕๕ ปี',
+      title: '    ๓๕ - ๕๙ ปี',
       unit: 'คน',
-      amount: 4
+      amount: age3 || '-'
     })
 
     worksheet.addRow({
       title: '    ๖๐ ปี ขึ้นไป',
       unit: 'คน',
-      amount: 16
+      amount: age4 || '-'
     })
 
     worksheet.addRow({
@@ -101,49 +181,49 @@ class ExportController extends Controller {
     worksheet.addRow({
       title: '    แรกเกิด อายุต่ำกว่า ๖ เดือน',
       unit: 'คน',
-      amount: '-'
+      amount: special1 || '-'
     })
 
     worksheet.addRow({
       title: '    เด็ก อายุ ๖ เดือน - ๖ ปี',
       unit: 'คน',
-      amount: '-'
+      amount: special2 || '-'
     })
 
     worksheet.addRow({
       title: '    หญิงตั้งครรภ์',
       unit: 'คน',
-      amount: '-'
+      amount: pregnant || '-'
     })
 
     worksheet.addRow({
       title: '    หญิงหลังคลอด',
       unit: 'คน',
-      amount: '-'
+      amount: afterPregnant || '-'
     })
 
     worksheet.addRow({
       title: '    ผู้สูงอายุ',
       unit: 'คน',
-      amount: '-'
+      amount: age4 || '-'
     })
 
     worksheet.addRow({
       title: '    ผู้พิการ',
       unit: 'คน',
-      amount: '-'
+      amount: disabled || '-'
     })
 
     worksheet.addRow({
       title: '    ผู้ป่วยเรื้อรัง',
       unit: 'คน',
-      amount: '-'
+      amount: chronicDisease || '-'
     })
 
     worksheet.addRow({
       title: '    มีพฤติกรรมเสี่ยงด้านความรุนแรง',
       unit: 'คน',
-      amount: '-'
+      amount: violentBehavior || '-'
     })
 
     worksheet.addRow({

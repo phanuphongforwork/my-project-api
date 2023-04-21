@@ -7,6 +7,7 @@ class ActivityUser extends Transformer {
       person_id: this.model.person_id,
       person: this.model.person ?? null,
       status: this.model.status,
+      join_date: this.join_date,
       created_at: this.model.created_at,
       updated_at: this.model.updated_at
     }
