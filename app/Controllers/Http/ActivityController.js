@@ -34,6 +34,7 @@ class ActivityController extends Controller {
       worksheet.mergeCells('A8', 'C8')
       worksheet.mergeCells('A9', 'C9')
       worksheet.getCell('A1').value = data?.activity_name ?? '-'
+
       worksheet.getCell('A3').value = data?.activity_description
         ? 'รายละเอียด : ' + data?.activity_description
         : 'รายละเอียด :'
@@ -53,7 +54,6 @@ class ActivityController extends Controller {
       worksheet.columns = [{ key: 'name' }, { key: 'tel' }, { key: 'joinDate' }]
 
       data.users.forEach(function(item, index) {
-        console.log(item)
         const person = item?.person
 
         if (person) {

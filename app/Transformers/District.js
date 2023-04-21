@@ -5,6 +5,7 @@ class District extends Transformer {
     return {
       district_id: this.model.district_id,
       district_name: this.model.district_name,
+
       created_at: this.model.created_at,
       updated_at: this.model.updated_at
     }
