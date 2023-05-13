@@ -102,6 +102,17 @@ class PersonService extends Service {
   static async create(payload) {
     const query = await Model.create(payload)
 
+    const user = await User.query()
+      .where('person_id', query.id)
+      .whereHas('levels', builder => {
+        builder.where('level_id', 3)
+      })
+      .first()
+
+    if (!user) {
+      await User.create({ person_id: query.id, level_id: '3' })
+    }
+
     return query.toJSON()
   }
 
