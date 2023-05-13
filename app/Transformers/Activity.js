@@ -7,6 +7,7 @@ class Activity extends Transformer {
       activity_name: this.model.activity_name,
       activity_description: this.model.activity_description,
       activity_date: this.model.activity_date,
+      activity_end_date: this.model.activity_end_date,
       agency_name: this.model.agency_name,
       location_name: this.model.location_name,
       status: this.model.status,
