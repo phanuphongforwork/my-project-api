@@ -9,6 +9,7 @@ class Activity extends Transformer {
       health_check_end: this.model.health_check_end,
       health_check_date: this.model.health_check_date,
       location_name: this.model.location_name,
+      agency_name: this.model.agency_name,
       status: this.model.status,
       users: this.model.users ?? null,
       created_at: this.model.created_at,
