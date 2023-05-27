@@ -18,6 +18,7 @@ class HealthCheckUsersSchema extends Schema {
         .unsigned()
 
       table.string('join_date').nullable()
+      table.text('remark').nullable()
 
       table.timestamps()
     })
