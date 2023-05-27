@@ -56,7 +56,12 @@ class HouseHoldService extends Service {
     return await query.toJSON()
   }
 
-  static async getById(id, params = {}) {
+  static async getById(
+    id,
+    params = {
+      includes: 'members.person,community,alley,road,subdistrict,person,volunteer,district,members'
+    }
+  ) {
     const query = await Model.parseQuery(params)
       .where('house_id', id)
       .first()
