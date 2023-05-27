@@ -1,8 +1,8 @@
 'use strict'
 
 const Controller = use('App/Controllers/Http/Controller')
-const Service = use('App/Services/ActivityService')
-const Transformer = use('App/Transformers/Activity')
+const Service = use('App/Services/HealCheckService')
+const Transformer = use('App/Transformers/HealthCheck')
 
 const ExcelJS = require('exceljs')
 const dayjs = require('dayjs')

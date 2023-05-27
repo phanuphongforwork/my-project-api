@@ -16,6 +16,8 @@ Route.post('api/v1/auth/login', 'Auth/LoginController.index').middleware('guest'
 Route.get('api/v1/persons/me', 'PersonController.me').middleware(['auth'])
 
 Route.group(() => {
+  Route.resource('health-check', 'HealthCheckController').only(['index', 'show', 'store', 'update', 'destroy '])
+
   Route.get('/house-holds/export/:id', 'HouseHoldController.export')
 
   Route.get('/activities/export', 'ActivityController.export')
@@ -44,6 +46,7 @@ Route.group(() => {
 
   Route.post('persons/levels', 'PersonController.updatePersonLevel')
   Route.post('persons/not-in-activity', 'PersonController.getNotInActivity')
+  Route.post('persons/not-in-health-check', 'PersonController.getNotInHealthCheck')
   Route.get('persons/available', 'PersonController.getAvailable')
   Route.resource('persons', 'PersonController').only(['index', 'show', 'store', 'update', 'destroy '])
 
