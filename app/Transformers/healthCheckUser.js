@@ -1,3 +1,4 @@
+const HealthCheckUser = use('App/Models/HealthCheckUser')
 const Transformer = use('App/Transformers/Transformer')
 
 class healthCheckUser extends Transformer {
@@ -10,7 +11,12 @@ class healthCheckUser extends Transformer {
       join_date: this.join_date,
       remark: this.remark,
       created_at: this.model.created_at,
-      updated_at: this.model.updated_at
+      updated_at: this.model.updated_at,
+      users:
+        (await ActivityUser.query()
+          .where('health_check_id', this.model.health_check_id)
+          .with('person')
+          .fetch()) || []
     }
   }
 }

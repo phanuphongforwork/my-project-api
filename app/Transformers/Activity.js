@@ -1,4 +1,5 @@
 const Transformer = use('App/Transformers/Transformer')
+const ActivityUser = use('App/Models/ActivityUser')
 
 class Activity extends Transformer {
   async transform() {
@@ -11,10 +12,15 @@ class Activity extends Transformer {
       agency_name: this.model.agency_name,
       location_name: this.model.location_name,
       status: this.model.status,
-
       users: this.model.users ?? null,
       created_at: this.model.created_at,
-      updated_at: this.model.updated_at
+      updated_at: this.model.updated_at,
+      users:
+        (await ActivityUser.query()
+          .where('activity_id', this.model.activity_id)
+          .where('status', '1')
+          .with('person')
+          .fetch()) || []
     }
   }
 }

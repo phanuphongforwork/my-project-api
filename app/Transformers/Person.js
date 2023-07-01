@@ -23,6 +23,7 @@ class Person extends Transformer {
       levels: this.model.levels ?? null,
       household_member: await HouseholdMember.query()
         .where('person_id', this.model.person_id)
+        .with('household')
         .first()
     }
   }
