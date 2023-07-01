@@ -8,8 +8,6 @@ class CommunityService extends Service {
 
     const query = await model.paginate(page, perPage)
 
-    console.log(await query.toJSON())
-
     return await query.toJSON()
   }
 

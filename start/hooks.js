@@ -34,7 +34,7 @@ hooks.after.httpServer(() => {
       }
       query.whereNot(args[2], args[3])
     }
-    console.log(args)
+
     const result = await query.count('* as total')
 
     if (result[0].total > 0) {

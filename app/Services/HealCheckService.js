@@ -34,8 +34,6 @@ class HealCheckService extends Service {
 
     const { deleteUserIds = [], newUserIds = [], ...rest } = payload
 
-    console.log(payload)
-
     const newPayload = {
       health_check_name: rest.health_check_name,
       health_check_date: rest.health_check_date,

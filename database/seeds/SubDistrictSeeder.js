@@ -24,11 +24,6 @@ class SubDistrictSeeder {
 
     subdistrictJson.forEach(item => {
       const post = pcodeJson.find(sub => {
-        console.log(
-          `${Number(sub?.subdistrict)} === ${Number(item?.scode)}} is ${Number(sub?.subdistrict) ===
-            Number(item?.scode)}`
-        )
-
         return Number(sub?.subdistrict) === Number(item?.scode)
       })
 

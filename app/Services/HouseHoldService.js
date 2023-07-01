@@ -39,8 +39,6 @@ class HouseHoldService extends Service {
 
     const query = await model.paginate(1, 20)
 
-    console.log(await query.toJSON())
-
     return await query.toJSON()
   }
 

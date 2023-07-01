@@ -9,7 +9,6 @@ class ActivityService extends Service {
   static async getAll(params) {
     const { page = 1, perPage = 999, includes = 'users' } = params
     const model = Model.parseQuery(params).with('users.person')
-    console.log(model)
 
     const query = await model.paginate(page, perPage)
 
