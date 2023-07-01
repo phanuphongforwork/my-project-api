@@ -21,7 +21,7 @@ Route.group(() => {
   Route.get('/house-holds/export/:id', 'HouseHoldController.export')
 
   Route.get('/activities/export', 'ActivityController.export')
-  Route.post('exports/house-holds', 'ExportController.houseHolds').middleware(['auth'])
+  Route.get('exports/house-holds', 'ExportController.houseHolds').middleware(['auth'])
 
   Route.resource('levels', 'LevelController').only(['index'])
 

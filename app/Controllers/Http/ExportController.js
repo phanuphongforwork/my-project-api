@@ -85,7 +85,8 @@ class ExportController extends Controller {
       age7,
       allUsersCount,
       disabled,
-      chronicDisease
+      chronicDisease,
+      houseHolds: houseHolds?.length || 0
     }
   }
 }
