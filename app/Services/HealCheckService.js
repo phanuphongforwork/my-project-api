@@ -34,6 +34,8 @@ class HealCheckService extends Service {
 
     const { deleteUserIds = [], newUserIds = [], ...rest } = payload
 
+    console.log(payload)
+
     const newPayload = {
       health_check_name: rest.health_check_name,
       health_check_date: rest.health_check_date,
@@ -48,12 +50,12 @@ class HealCheckService extends Service {
 
     if (newUserIds && newUserIds?.length) {
       const payloadNew = []
-      newUserIds.forEach(data => {
+      newUserIds.forEach(person_id => {
         payloadNew.push({
           health_check_id: id,
-          person_id: data.person_id,
-          join_date: data.join_date,
-          remark: data.remark
+          person_id: person_id,
+          join_date: dayjs().format('YYYY-MM-DD'),
+          remark: rest.remark ?? undefined
         })
       })
       await HealthCheckUser.createMany(payloadNew)
@@ -68,7 +70,7 @@ class HealCheckService extends Service {
     }
 
     const result = await Model.parseQuery({ includes: 'users.person' })
-      .where('activity_id', id)
+      .where('health_check_id', id)
       .first()
 
     return result.toJSON()
