@@ -16,6 +16,8 @@ class LoginController extends Controller {
         return this.fail(response, null, 'ไม่สามารถเข้าใช้งานได้')
       }
 
+      await PersonService.update(user.person_id, { role: role })
+
       return this.success(response, result)
     } catch (e) {
       return this.fail(

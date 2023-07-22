@@ -19,11 +19,26 @@ class PersonService extends Service {
     }
     const model = Model.parseQuery(params)
 
-    if (user.role !== '1') {
+    if (user.role === '2') {
       const members = await HouseholdMember.query()
         // .select('person_id')
         .whereHas('household', builder => {
           builder.where('volunteer_id', user.person_id)
+        })
+        .fetch()
+
+      const memberIds = await members.toJSON().map(member => {
+        return member.person_id
+      })
+
+      model.whereIn('person_id', memberIds)
+    }
+
+    if (user.role === '4') {
+      const members = await HouseholdMember.query()
+        // .select('person_id')
+        .whereHas('household', builder => {
+          builder.where('district_id', user.district_id)
         })
         .fetch()
 

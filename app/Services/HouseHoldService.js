@@ -1,17 +1,24 @@
 const Service = use('App/Services/Service')
 const Model = use('App/Models/Household')
 const HouseholdMember = use('App/Models/HouseholdMember')
+const User = use('App/Models/User')
 
 class HouseHoldService extends Service {
-  static async getAll(params, role, userId, withOutPaginate = false) {
+  static async getAll(params, role, userId, withOutPaginate = false, districtId) {
     const { page, perPage, includes = 'district,community,alley,road,subdistrict,person,volunteer' } = params
 
     const model = Model.parseQuery(params).with('members', builder => {
       builder.where('status', '1').with('person')
     })
 
-    if (role !== '1') {
+    if (role === '2') {
       model.where('volunteer_id', userId)
+    }
+
+    if (role === '4') {
+      if (districtId) {
+        model.where('district_id', districtId)
+      }
     }
 
     if (withOutPaginate) {

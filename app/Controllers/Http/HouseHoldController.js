@@ -12,7 +12,13 @@ dayjs.locale('th')
 
 class HouseHoldController extends Controller {
   async index({ request, response, auth }) {
-    const result = await Service.getAll(request.get(), auth.user.role, auth.user.person_id)
+    const result = await Service.getAll(
+      request.get(),
+      auth.user.role,
+      auth.user.person_id,
+      false,
+      auth.user.district_id
+    )
 
     return this.success(response, await Transformer.asyncPaginate(result), 'OK', this.makePaginateMeta(result))
   }

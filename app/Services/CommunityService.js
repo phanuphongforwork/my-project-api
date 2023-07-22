@@ -2,7 +2,7 @@ const Service = use('App/Services/Service')
 const Model = use('App/Models/Community')
 
 class CommunityService extends Service {
-  static async getAll(params) {
+  static async getAll(params, user) {
     const { page, perPage, includes = 'subdistrict' } = params
     const model = Model.parseQuery(params)
 

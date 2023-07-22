@@ -28,6 +28,9 @@ class LevelSeed {
       },
       {
         level_name: 'สมาชิกครัวเรือน'
+      },
+      {
+        level_name: 'เขต'
       }
     ])
   }
